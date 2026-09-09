@@ -1,0 +1,39 @@
+.dashboardsettings{
+    justify-content:space-between;
+    display: flex;
+    width: auto;
+    height: 10%;
+    background-color: rgb(100, 180, 180);
+    align-items: center;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 7px;
+}
+
+.botoneh{
+    display: flex;
+    flex-direction: row;
+    gap:40px;
+    justify-content: center;
+}
+
+.turnosContainer{
+    align-items: center;
+    height: 80px;
+    background-color: darkgray;
+    border-radius: 14px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.body{
+    padding: 10px;
+}
+
+.botonTurnoNuevo {
+  position: fixed;         /* Lo saca del flujo normal, flota sobre todo */
+  bottom:40px;            /* Distancia desde abajo */
+  right: 40px;             /* Distancia desde la derecha */
+  z-index: 1000;           /* Se asegura de quedar arriba de otros elementos */
+}
