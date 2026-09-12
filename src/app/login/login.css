@@ -1,0 +1,32 @@
+.divLogin{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    margin-top: 5%;
+}
+
+.example-button-row{
+    width: 100%;
+    height: 60px;
+    border-radius: 15px;
+    margin-top: 8%;
+}
+
+.header{
+    background-color: rgb(100, 180, 180);
+    height: 15%;
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.title{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+.forgot-password{
+    margin-top: 10px;
+}

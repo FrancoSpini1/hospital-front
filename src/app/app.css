@@ -1,0 +1,8 @@
+.body{
+    margin: 0;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+
+/*aca tengo que ver la forma de que al minimizar o modificar el tamaño de la ventana del buscador no rompa 
+la pag, que sea lo mas 'responsive' posible*/

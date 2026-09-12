@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 //angularmaterial components
 import { MatLineModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -7,8 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { TurnoService } from '../../services/turno.service';
 import { Turno } from '../../models/turno';
+import { Router} from '@angular/router'; 
 //////////////
-
 
 @Component({
   selector: 'app-dashboard',
@@ -16,6 +16,9 @@ import { Turno } from '../../models/turno';
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
+
+
+
 export class Dashboard implements OnInit{
 
   displayedColumns: string[] = [
@@ -25,11 +28,11 @@ export class Dashboard implements OnInit{
   'medico',
   'especialidad'
 ];
-
+private router = inject(Router);
 dataSource: Turno[] = [];
 
   constructor(private turnoService: TurnoService) {}
-
+  
   ngOnInit(): void {
         const idPaciente = 1;
 
@@ -43,5 +46,8 @@ dataSource: Turno[] = [];
         }
       });    
   }
-
+  hacerTurnoNuevo(){
+    this.router.navigate(['/turnonuevo']);    
+      
+  }
 }

@@ -1,0 +1,50 @@
+
+<div class="header">
+<div class="h1", style="font-size:30px">Pedir Turno</div>
+        <div class="botoneh" >
+                <button matButton style="font-size: 20px">Turnos</button>
+        <button matButton  style="font-size: 20px">Perfil</button>
+        <button matButton  style="font-size: 20px">Contacto</button>
+        </div>
+
+        <button mat-mini-fab class="opciones" style="width: 5%;" ><mat-icon>exit_to_app</mat-icon></button>    
+    
+</div>
+
+<div class="camposDeTurno">
+    <h4>seleccione especialidad</h4>
+    
+
+<mat-form-field>
+  <mat-label>especialidad</mat-label>
+  <mat-select>
+    @for (especialidad of especialidades; track especialidad) {
+      <mat-option [value]="especialidad.value">{{especialidad.viewValue}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+<h4>seleccione medico</h4>
+<mat-form-field>
+  <mat-label>medico</mat-label>
+  <mat-select>
+    @for (medicos of staff; track medicos) {
+      <mat-option [value]="medicos.value">{{medicos.viewValue}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+
+  <h4>Seleccione fecha</h4>
+
+  <mat-form-field>
+    <mat-label>Fecha del turno</mat-label>
+
+    <input matInput [matDatepicker]="picker">
+
+    <mat-datepicker-toggle
+      matIconSuffix
+      [for]="picker">
+    </mat-datepicker-toggle>
+
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
