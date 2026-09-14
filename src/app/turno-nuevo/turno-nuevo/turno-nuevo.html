@@ -15,20 +15,20 @@
     <h4>seleccione especialidad</h4>
     
 
-<mat-form-field>
+<mat-form-field >
   <mat-label>especialidad</mat-label>
   <mat-select>
-    @for (especialidad of especialidades; track especialidad) {
-      <mat-option [value]="especialidad.value">{{especialidad.viewValue}}</mat-option>
+    @for (especialidad of especialidades2; track especialidad) {
+      <mat-option>{{especialidad}}</mat-option>
     }
   </mat-select>
 </mat-form-field>
 <h4>seleccione medico</h4>
-<mat-form-field>
+<mat-form-field >
   <mat-label>medico</mat-label>
   <mat-select>
-    @for (medicos of staff; track medicos) {
-      <mat-option [value]="medicos.value">{{medicos.viewValue}}</mat-option>
+    @for (medicos of medicos; track medicos) {
+      <mat-option>{{medicos.nombreCompleto}}</mat-option>
     }
   </mat-select>
 </mat-form-field>
