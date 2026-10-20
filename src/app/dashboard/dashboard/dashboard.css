@@ -1,39 +1,68 @@
-.dashboardsettings{
-    justify-content:space-between;
-    display: flex;
-    width: auto;
-    height: 10%;
-    background-color: rgb(100, 180, 180);
-    align-items: center;
-    padding: 25px;
-    border-radius: 14px;
-    margin-bottom: 7px;
+.body {
+  padding: 10px;
+  padding-bottom: 100px; 
 }
 
-.botoneh{
-    display: flex;
-    flex-direction: row;
-    gap:40px;
-    justify-content: center;
+.dashboardsettings {
+  display: flex;
+  flex-wrap: wrap;               
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background-color: rgb(100, 180, 180);
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 7px;
 }
 
-.turnosContainer{
-    align-items: center;
-    height: 80px;
-    background-color: darkgray;
-    border-radius: 14px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+.tittle {
+  font-size: clamp(24px, 5vw, 40px); 
+  margin: 0;
 }
 
-.body{
-    padding: 10px;
+.botoneh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 40px;
+}
+
+.botoneh button {
+  font-size: 20px;
+}
+
+.turnosContainer {
+  background-color: darkgray;
+  border-radius: 14px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;                      
+}
+
+.turnosTitulo {
+  font-size: 20px;
+  text-align: center;
+}
+
+.tabla-wrapper {
+  overflow-x: auto;               
+}
+
+.tabla-wrapper table {
+  width: 100%;
 }
 
 .botonTurnoNuevo {
-  position: fixed;         /* Lo saca del flujo normal, flota sobre todo */
-  bottom:40px;            /* Distancia desde abajo */
-  right: 40px;             /* Distancia desde la derecha */
-  z-index: 1000;           /* Se asegura de quedar arriba de otros elementos */
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+
+@media (max-width: 600px) {
+  .botonTurnoNuevo {
+    bottom: 20px;
+    right: 20px;
+  }
 }

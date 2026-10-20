@@ -1,22 +1,19 @@
-
-<div class="body" >
-    <div class="dashboardsettings">
-        <p class="tittle" style="font-size: 40px;">DASHBOARD</p>
-        <div class="botoneh" >
-                <button matButton style="font-size: 20px">Turnos</button>
-        <button matButton  style="font-size: 20px">Perfil</button>
-        <button matButton  style="font-size: 20px">Contacto</button>
-        </div>
-
-        <button mat-mini-fab class="opciones" style="width: 5%;" ><mat-icon >exit_to_app</mat-icon></button>    
+<div class="body">
+  <div class="dashboardsettings">
+    <p class="tittle">DASHBOARD</p>
+    <div class="botoneh">
+      <button matButton>Turnos</button>
+      <button matButton>Perfil</button>
+      <button matButton>Contacto</button>
     </div>
-    <div class="turnosContainer">
-        <mat-toolbar-row>
-  <span style="font-size: 20px;">Turnos</span>
-        
-</mat-toolbar-row>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <button mat-mini-fab class="opciones"><mat-icon>exit_to_app</mat-icon></button>
+  </div>
 
+  <div class="turnosContainer">
+    <span class="turnosTitulo">Turnos</span>
+
+    <div class="tabla-wrapper">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <!-- Fecha -->
   <ng-container matColumnDef="fecha">
     <th mat-header-cell *matHeaderCellDef> Fecha </th>
@@ -59,14 +56,13 @@
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
 
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-</table>      
-
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>      </table>
     </div>
-    <div class="botonTurnoNuevo">
-        <button matFab (click)="hacerTurnoNuevo()">
-        <mat-icon>add</mat-icon>
-      </button>
-    </div>
+  </div>
+
+  <div class="botonTurnoNuevo">
+    <button matFab (click)="hacerTurnoNuevo()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
 </div>
